@@ -1,0 +1,28 @@
+{
+  "name": "cip-airline",
+  "version": "1.0.0",
+  "description": "Cip now in the SKY!",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm live-server src --port=8080",
+    "tailwind": "npx tailwindcss -i ./src/css/main.css -o ./src/converted-css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hessamasna/WebProgramming-AirlineProject.git"
+  },
+  "keywords": [
+    "cip",
+    "airline"
+  ],
+  "author": "Hesam Asnaashari,Amirreza Ghasemi,Shayan Shabanzadeh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hessamasna/WebProgramming-AirlineProject/issues"
+  },
+  "homepage": "https://github.com/hessamasna/WebProgramming-AirlineProject#readme",
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
