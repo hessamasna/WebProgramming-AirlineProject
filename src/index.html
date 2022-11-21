@@ -11,6 +11,9 @@
     <link href="assets/font-awesome/css/all.css" rel="stylesheet">
     <script src="assets/font-awesome/js/all.js"></script>
     <script src="js/main.js" defer></script>
+    <!--    <script src="../path/to/flowbite/dist/flowbite.js"></script>-->
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/datepicker.js"></script>
+
 
     <title>Cip Airline</title>
 </head>
@@ -39,93 +42,104 @@
                         <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
                     </a>
                 </div>
-                <div class="flex lg:hidden">
-                    <button type="button"
-                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                        <span class="sr-only">Open main menu</span>
-                        <!-- Heroicon name: outline/bars-3 -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                             stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
-                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Product</a>
+                <!--                <div class="flex lg:hidden">-->
+                <!--                    <button type="button"-->
+                <!--                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">-->
+                <!--                        <span class="sr-only">Open main menu</span>-->
+                <!--                        &lt;!&ndash; Heroicon name: outline/bars-3 &ndash;&gt;-->
+                <!--                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
+                <!--                             stroke-width="1.5" stroke="currentColor" aria-hidden="true">-->
+                <!--                            <path stroke-linecap="round" stroke-linejoin="round"-->
+                <!--                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>-->
+                <!--                        </svg>-->
+                <!--                    </button>-->
+                <!--                </div>-->
+                <!--                <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">-->
+                <!--                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Product</a>-->
 
-                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Features</a>
+                <!--                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Features</a>-->
 
-                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Marketplace</a>
+                <!--                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Marketplace</a>-->
 
-                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Company</a>
-                </div>
-                <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+                <!--                    <a href="#" class="font-semibold text-gray-900 hover:text-gray-900">Company</a>-->
+                <!--                </div>-->
+                <div class=" lg:flex space-s-2 lg:min-w-0 lg:flex-1 lg:justify-end">
                     <a href="#"
-                       class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">Log
-                        in</a>
+                       class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        Log in
+                    </a>
+                    <a href="#"
+                       class="inline-block bg-indigo-600 text-white rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        Sign Up
+                    </a>
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
-            <div role="dialog" aria-modal="true">
-                <div focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
-                    <div class="flex h-9 items-center justify-between">
-                        <div class="flex">
-                            <a href="#" class="-m-1.5 p-1.5">
-                                <span class="sr-only">Your Company</span>
-                                <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                     alt="">
-                            </a>
-                        </div>
-                        <div class="flex">
-                            <button type="button"
-                                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                                <span class="sr-only">Close menu</span>
-                                <!-- Heroicon name: outline/x-mark -->
-                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="mt-6 flow-root">
-                        <div class="-my-6 divide-y divide-gray-500/10">
-                            <div class="space-y-2 py-6">
-                                <a href="#"
-                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Product</a>
+            <!--            <div role="dialog" aria-modal="true">-->
+            <!--                <div focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">-->
+            <!--                    <div class="flex h-9 items-center justify-between">-->
+            <!--                        <div class="flex">-->
+            <!--                            <a href="#" class="-m-1.5 p-1.5">-->
+            <!--                                <span class="sr-only">Your Company</span>-->
+            <!--                                <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"-->
+            <!--                                     alt="">-->
+            <!--                            </a>-->
+            <!--                        </div>-->
+            <!--                        <div class="flex">-->
+            <!--                            <button type="button"-->
+            <!--                                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">-->
+            <!--                                <span class="sr-only">Close menu</span>-->
+            <!--                                &lt;!&ndash; Heroicon name: outline/x-mark &ndash;&gt;-->
+            <!--                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"-->
+            <!--                                     stroke-width="1.5" stroke="currentColor" aria-hidden="true">-->
+            <!--                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>-->
+            <!--                                </svg>-->
+            <!--                            </button>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    <div class="mt-6 flow-root">-->
+            <!--                        <div class="-my-6 divide-y divide-gray-500/10">-->
+            <!--                            <div class="space-y-2 py-6">-->
+            <!--                                <a href="#"-->
+            <!--                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Product</a>-->
 
-                                <a href="#"
-                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Features</a>
+            <!--                                <a href="#"-->
+            <!--                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Features</a>-->
 
-                                <a href="#"
-                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Marketplace</a>
+            <!--                                <a href="#"-->
+            <!--                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Marketplace</a>-->
 
-                                <a href="#"
-                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Company</a>
-                            </div>
-                            <div class="py-6">
-                                <a href="#"
-                                   class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log
-                                    in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--                                <a href="#"-->
+            <!--                                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Company</a>-->
+            <!--                            </div>-->
+            <!--                            <div class="py-6">-->
+            <!--                                <a href="#"-->
+            <!--                                   class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log-->
+            <!--                                    in</a>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </div>
     <main>
-        <div class="relative px-6 lg:px-8">
+        <div class="relative px-6 lg:px-8 ">
             <div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                 <div>
                     <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              <span class="text-gray-600">
-                Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
-                      class="absolute inset-0" aria-hidden="true"></span>Read more <span
-                      aria-hidden="true">&rarr;</span></a>
-              </span>
+                          <span class="text-gray-600">
+                            Announcing our next round of funding.
+                              <a href="#" class="font-semibold text-indigo-600">
+                                  <span class="absolute inset-0" aria-hidden="true">
+                                  </span>
+                                  Read more
+                                  <span aria-hidden="true">
+                                  &rarr;
+                                  </span>
+                              </a>
+                          </span>
                         </div>
                     </div>
                     <div>
@@ -148,6 +162,18 @@
                             </a>
                         </div>
                     </div>
+                    <!--                    todo work on main banner elements-->
+                    <!--                    <img class="absolute inset-x-0 -bottom-20 md:-bottom-60 w-1/3" src="assets/img/world.png">-->
+                    <!--                    <img class=" -z-10 absolute inset-x-0 -bottom-1/3 w-60 md:w-96 h-auto" src="assets/img/world.png">-->
+                    <!--                    <img class=" -z-10 absolute -inset-x-0 top-2 w-24 h-auto" src="assets/img/main-banner/Asset-1.png">-->
+                    <!--                    <img class=" -z-10 absolute inset-x-0 -bottom-1/3 w-60 md:w-96 h-auto"-->
+                    <!--                         src="assets/img/main-banner/Asset-2.png">-->
+                    <!--                    <img class=" -z-10 absolute inset-x-0 -bottom-1/3 w-60 md:w-96 h-auto"-->
+                    <!--                         src="assets/img/main-banner/Asset-3.png">-->
+                    <!--                    <img class=" -z-10 absolute inset-x-0 -bottom-1/3 w-60 md:w-96 h-auto"-->
+                    <!--                         src="assets/img/main-banner/Asset-4.png">-->
+                    <!--                    <img class=" -z-10 absolute inset-x-0 -bottom-1/3 w-60 md:w-96 h-auto"-->
+                    <!--                         src="assets/img/main-banner/Asset-5.png">-->
                     <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                         <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
                              viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,58 +193,220 @@
         </div>
     </main>
 </div>
+
 <!-- component -->
-<div id="team" class="section relative pt-20 pb-8 md:pt-16 bg-white dark:bg-gray-800">
+<div class="container mt-2 mx-auto flex justify-center items-center p-2 md:p-0">
+    <div class="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg ring-1 ring-gray-500">
+        <div class="flex flex-col md:flex-row">
+
+            <div class="col-span-6 sm:col-span-3">
+                <label for="country" class="block text-sm font-medium text-gray-700 ">نوع بلیط</label>
+                <select id="country" name="country" autocomplete="country-name"
+                        class="px-7 mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                    <option>یک طرفه</option>
+                    <option>دو طرفه</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center divide-y divide-slate-700">
+            <div class=" border border-gray-200 p-2 rounded">
+                <div date-rangepicker class="flex items-center">
+                    <span class="mx-2 text-gray-500">از</span>
+                    <div class="relative ">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 text-gray-400" fill="currentColor"
+                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input name="start" type="text"
+                               class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400 text-white ring-1 ring-gray-900"
+                               placeholder="تاریخ شروع سفر">
+                    </div>
+                    <span class="mx-2 mr-4 text-gray-500">تا</span>
+                    <div class="relative">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 text-gray-400" fill="currentColor"
+                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input name="end" type="text"
+                               class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400 text-white ring-1 ring-gray-900"
+                               placeholder="تاریخ پایان سفر">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between ring-1 ring-gray-900 text-sm rounded-lg  p-2.5 py-0">
+                <div class="flex items-center">
+                    <div>
+                        <label for="custom-input-number"
+                               class="w-full contents text-gray-700 text-sm font-semibold">تعداد مسافرین
+                        </label>
+                    </div>
+
+                    <div class="flex flex-row h-10  rounded-lg relative bg-transparent mt-1 mx-2">
+                        <button data-action="decrement"
+                                class="  text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer outline-none">
+                            <span class="m-auto text-2xl font-thin">−</span>
+                        </button>
+                        <input type="number" min="1"
+                               class="outline-none focus:outline-none text-center w-10  font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                               name="custom-input-number" value="1"></input>
+
+                        <button data-action="increment"
+                                class=" text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer">
+                            <span class="m-auto text-2xl font-thin">+</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="flex items-center mx-2 ">
+                    <label for="TicketVal" class="w-full contents text-gray-700 text-sm font-semibold w-20">
+                        کلاس پروازی
+                    </label>
+                    <select id="TicketVal" name="country" autocomplete="country-name"
+                            class="px-7 mt-1 block  rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                        <option>مهم نیست</option>
+                        <option>اکونومی</option>
+                        <option>بزینس</option>
+                        <option>فرست</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <button class="p-2 border w-1/4 rounded-md bg-gray-800 text-white">پیدا کردن بلیط مورد نظر</button>
+        </div>
+    </div>
+</div>
+<!--<div class='relative searchable-list'>-->
+<!--    <input type='text' class='data-list peer w-30 h-10 rounded-sm bg-white cursor-pointer outline-none text-gray-700-->
+<!--            caret-gray-800 pl-2 pr-7 focus:bg-gray-200 font-bold transition-all duration-300 text-sm text-overflow-ellipsis '-->
+<!--           spellcheck="false" placeholder="Select a fruit"></input>-->
+<!--    <svg class="outline-none cursor-pointer fill-gray-400 absolute transition-all duration-200 h-full w-4 -rotate-90 right-2 top-[50%] -translate-y-[50%]"-->
+<!--         viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--         xmlns:xlink="http://www.w3.org/1999/xlink">-->
+<!--        <path d="M0 256l512 512L1024 256z"></path>-->
+<!--    </svg>-->
+<!--    <ul class='absolute  option-list overflow-y-scroll max-h-64 min-h-[0px] flex flex-col top-12-->
+<!--            left-0 w-24  bg-white rounded-sm   scale-0 opacity-0-->
+<!--            transition-all-->
+<!--            duration-200 origin-top-right'>-->
+<!--    </ul>-->
+
+<!--</div>-->
+
+<!-- component -->
+<div class="h-screen flex items-center justify-center bg-white">
+
+    <div class="grid grid-cols-12 px-18 gap-5">
+
+        <div class="col-span-12">
+            <p class="text-gray-800 text-3xl font-bold">کجا بریم حالا !؟</p>
+        </div>
+
+        <!-- Card 1 -->
+        <a class="col-span-3 bg-rose-700 rounded-xl h-52 md:h-80" href="">
+
+            <!-- Image -->
+            <img src="https://a0.muscache.com/im/pictures/a433b4d0-8183-4523-b4c5-99b81c5729c1.jpg?im_w=320"
+                 class="rounded-t-xl max-h-44"/>
+
+            <!-- City Name -->
+            <p class="text-xl md:text-3xl text-gray-50 pt-5 ps-3"> فلان جا اول </p>
+
+            <!-- Distance -->
+            <p class="text-xs md:text-lg font-light text-gray-50 pt-3 ps-3 pb-10"> لورم </p>
+
+        </a>
+
+        <!-- Card 2 -->
+        <a class="col-span-3 bg-red-500 rounded-xl h-52 md:h-80" href="">
+
+            <!-- Image -->
+            <img src="https://a0.muscache.com/im/pictures/db8167f7-5c57-4684-80ae-4350c73e45ef.jpg?im_w=320"
+                 class="rounded-t-xl max-h-44"/>
+
+            <!-- City Name -->
+            <p class="text-xl md:text-3xl text-gray-50 pt-5 ps-3"> فلان جا دوم </p>
+
+            <!-- Distance -->
+            <p class="text-xs md:text-lg font-light text-gray-50 pt-3 ps-3 pb-10"> لورم</p>
+
+        </a>
+
+        <!-- Card 3 -->
+        <a class="col-span-3 bg-pink-700 rounded-xl h-52 md:h-80" href="">
+
+            <!-- Image -->
+            <img src="https://a0.muscache.com/im/pictures/ffde0c4b-1889-4d11-bb00-41411d34fdfc.jpg?im_w=320"
+                 class="rounded-t-xl max-h-44"/>
+
+            <!-- City Name -->
+            <p class="text-xl md:text-3xl text-gray-50 pt-5 ps-3"> فلان جا سوم </p>
+
+            <!-- Distance -->
+            <p class="text-xs md:text-lg font-light text-gray-50 pt-3 ps-3 pb-10"> لورم </p>
+
+        </a>
+
+        <!-- Card 4 -->
+        <a class="col-span-3 bg-rose-600 rounded-xl h-52 md:h-80" href="">
+
+            <!-- Image -->
+            <img src="https://a0.muscache.com/im/pictures/03bb6d0a-5ccb-47e1-83fc-b7ad87e7f8c3.jpg?im_w=320"
+                 class="rounded-t-xl max-h-44"/>
+
+            <!-- City Name -->
+            <p class="text-xl md:text-3xl text-gray-50 pt-5 ps-3"> فلان جا چهارم </p>
+
+            <!-- Distance -->
+            <p class="text-xs md:text-lg font-light text-gray-50 pt-3 ps-3 pb-10"> لورم </p>
+
+        </a>
+
+    </div>
+
+</div>
+<!-- component -->
+<div id="team" class="section relative pt-20 pb-8 md:pt-16 bg-white bg-gray-800">
     <div class="container xl:max-w-6xl mx-auto px-4">
         <!-- section header -->
         <header class="text-center mx-auto mb-12">
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-gray-800 text-gray-100">
                 تیم ما
             </h2>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
-                <circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
-                <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-                <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                 y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
+                <circle cx="50.1" cy="30.4" r="5" class="stroke-primary"
+                        style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
+                <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary"
+                      style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+                <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary"
+                      style="stroke-width: 2;stroke-miterlimit: 10;"></line>
             </svg>
         </header>
 
         <div class="flex flex-wrap flex-row -mx-4 justify-center">
             <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
-                <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                <div class="relative overflow-hidden bg-white bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp"
+                     data-wow-duration="1s"
+                     style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
                     <!-- team block -->
                     <div class="relative overflow-hidden px-6">
-                        <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
+                        <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar1.png"
+                             class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
                     </div>
                     <div class="pt-6 text-center">
                         <p class="text-xl leading-normal text-white font-bold mb-1">شایان شعبانزاده</p>
                         <p class="text-gray-500 leading-relaxed text-xs">هم‌بنیان‌‌گذار/برنامه نویس</p>
                         <!-- social icon -->
-                        <div class="mt-2 mb-5 text-white space-x-reverse space-x-2">
-                            <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
-                                 <i class="fab fa-twitter text-twitter"></i>
-                            </a>
-                            <a class="hover:text-blue-700" aria-label="Instagram link" href="#">
-                                 <i class="fab fa-instagram text-instagram"></i>
-                            </a>
-                            <a class="hover:text-blue-700" aria-label="Linkedin link" href="#">
-                                 <i class="fab fa-linkedin text-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end team block -->
-            </div>
-            <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
-                <!-- team block -->
-                <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <div class="relative overflow-hidden px-6">
-                        <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar2.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
-                    </div>
-                    <div class="pt-6 text-center">
-                        <p class="text-xl leading-normal text-white font-bold mb-1">حسام اثنی عشری</p>
-                        <p class="text-gray-500 leading-relaxed text-xs">هم‌بنیان‌‌گذار/برنامه نویس</p>
-                        <!-- social icon -->
-                        <div class="mt-2 mb-5 text-white space-x-reverse space-x-2">
+                        <div class="mt-2 mb-5 text-white space-s-2">
                             <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
                                 <i class="fab fa-twitter text-twitter"></i>
                             </a>
@@ -235,15 +423,46 @@
             </div>
             <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
                 <!-- team block -->
-                <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <div class="relative overflow-hidden bg-white bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp"
+                     data-wow-duration="1s" data-wow-delay=".3s"
+                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <div class="relative overflow-hidden px-6">
-                        <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar4.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
+                        <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar2.png"
+                             class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
+                    </div>
+                    <div class="pt-6 text-center">
+                        <p class="text-xl leading-normal text-white font-bold mb-1">حسام اثنی عشری</p>
+                        <p class="text-gray-500 leading-relaxed text-xs">هم‌بنیان‌‌گذار/برنامه نویس</p>
+                        <!-- social icon -->
+                        <div class="mt-2 mb-5 text-white space-s-2">
+                            <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
+                                <i class="fab fa-twitter text-twitter"></i>
+                            </a>
+                            <a class="hover:text-blue-700" aria-label="Instagram link" href="#">
+                                <i class="fab fa-instagram text-instagram"></i>
+                            </a>
+                            <a class="hover:text-blue-700" aria-label="Linkedin link" href="#">
+                                <i class="fab fa-linkedin text-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end team block -->
+            </div>
+            <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
+                <!-- team block -->
+                <div class="relative overflow-hidden bg-white bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp"
+                     data-wow-duration="1s" data-wow-delay=".5s"
+                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <div class="relative overflow-hidden px-6">
+                        <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar4.png"
+                             class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
                     </div>
                     <div class="pt-6 text-center">
                         <p class="text-xlleading-normal text-white font-bold mb-1">امیررضا قاسمی ویسی</p>
                         <p class="text-gray-500 leading-relaxed text-xs">هم‌بنیان‌‌گذار/برنامه نویس</p>
                         <!-- social icon -->
-                        <div class="mt-2 mb-5 text-white space-x-reverse space-x-2">
+                        <div class="mt-2 mb-5 text-white space-s-2">
                             <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
                                 <i class="fab fa-twitter text-twitter"></i>
                             </a>
@@ -262,15 +481,17 @@
         <!-- end row -->
     </div>
 </div>
+<!-- component -->
+
 <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
     <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
-                <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+                <img src="#" class="mr-5 h-6 sm:h-9" alt="logo"/>
                 <p class="max-w-xs mt-4 text-sm text-gray-600">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
                 </p>
-                <div class="flex mt-8 space-x-4 space-x-reverse text-gray-600">
+                <div class="flex mt-8 space-s-4 text-gray-600">
 
                     <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
                         <i class="fa-brands fa-instagram text-2xl"></i>
