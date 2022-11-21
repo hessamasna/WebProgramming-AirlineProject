@@ -24,6 +24,7 @@
   "homepage": "https://github.com/hessamasna/WebProgramming-AirlineProject#readme",
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "flowbite": "^1.5.4",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
