@@ -18,7 +18,7 @@
     <title>Cip Airline</title>
 </head>
 <body dir="rtl">
-<div class="isolate bg-white">
+<div class="isolate bg-white dark:bg-gray-900">
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
              viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,6 @@
             <nav class="flex h-9 items-center justify-between" aria-label="Global">
                 <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                     <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
                         <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
                     </a>
                 </div>
@@ -65,7 +64,7 @@
                 <!--                                </div>-->
                 <div class=" lg:flex space-s-2 lg:min-w-0 lg:flex-1 lg:justify-end">
                     <a href="#"
-                       class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                       class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-white dark:ring-white">
                         ورود
                     </a>
                     <a href="#"
@@ -123,15 +122,15 @@
             <!--            </div>-->
         </div>
     </div>
-    <main>
+    <main >
         <div class="relative px-6 lg:px-8 ">
             <div class="mx-auto w-full md:max-w-5xl pt-20 pb-32 sm:pt-28 sm:pb-20">
                 <div>
                     <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                          <span class="text-gray-600">
+                          <span class="text-gray-600 dark:text-white">
                             برای رفت به صفحه بهترین آفر های این ماه
-                              <a href="#" class="font-semibold text-indigo-600">
+                              <a href="#" class="font-semibold text-indigo-600 dark:text-green-500">
                                   <span class="absolute inset-0" aria-hidden="true">
                                   </span>
                                   کلیک کنید!&larr;
@@ -143,16 +142,16 @@
                         </div>
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold tracking-tight sm:text-center sm:text-4xl">تجربه ای متفاوت با سیپ
+                        <h1 class="text-3xl font-bold tracking-tight sm:text-center sm:text-4xl dark:text-white">تجربه ای متفاوت با سیپ
                             ایرلاین</h1>
 
                         <div class="mt-8 flex gap-x-4 sm:justify-center">
                             <div class="container mt-2 mx-auto flex justify-center items-center p-2 md:p-0">
-                                <div class="border border-gray-300 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg ring-1 ring-gray-500">
+                                <div class="border border-gray-300 dark:bg-gray-900 p-6 grid grid-cols-1 gap-6 bg-white shadow-lg rounded-lg ring-1 ring-gray-500">
                                     <div class="flex flex-col md:flex-row">
-                                        <div class="flex items-center mx-2 ">
+                                        <div class="flex items-center mx-2 gap-1 ">
                                             <label for="TicketVal"
-                                                   class="w-full contents text-gray-700 text-sm font-semibold w-20">
+                                                   class="w-full contents text-gray-700 text-sm font-semibold w-20 dark:text-white">
                                                 نوع بلیط
                                             </label>
                                             <select id="Ticket" name="country"
@@ -163,7 +162,7 @@
                                         </div>
                                         <div class=" border border-gray-200 p-2 rounded col-span-6 sm:col-span-8 flex-1">
                                             <div class="flex items-center justify-evenly">
-                                                <span class="mx-2 text-gray-500">فرودگاه مبدا</span>
+                                                <span class="mx-2 text-gray-500 dark:text-white">فرودگاه مبدا</span>
                                                 <div class="relative ">
                                                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                                         <i class="fa-solid fa-plane-departure"></i>
@@ -172,7 +171,7 @@
                                                            class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900"
                                                            placeholder="نام یا کد فرودگاه">
                                                 </div>
-                                                <span class="mx-2 mr-4 text-gray-500">فرودگاه مقصد</span>
+                                                <span class="mx-2 mr-4 text-gray-500 dark:text-white">فرودگاه مقصد</span>
                                                 <div class="relative">
                                                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                                         <i class="fa-solid fa-plane-arrival"></i>
@@ -188,7 +187,7 @@
                                         <div class=" border border-gray-200 p-2 rounded">
 
                                             <div date-rangepicker class="flex items-center">
-                                                <span class="mx-2 text-gray-500">از</span>
+                                                <span class="mx-2 text-gray-500 dark:text-white">از</span>
                                                 <div class="relative ">
                                                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                                         <svg aria-hidden="true"
@@ -204,7 +203,7 @@
                                                            class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900"
                                                            placeholder="تاریخ شروع سفر">
                                                 </div>
-                                                <span class="mx-2 mr-4 text-gray-500">تا</span>
+                                                <span class="mx-2 mr-4 text-gray-500 dark:text-white">تا</span>
                                                 <div class="relative">
                                                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                                         <svg aria-hidden="true"
@@ -226,7 +225,7 @@
                                             <div class="flex items-center">
                                                 <div>
                                                     <label
-                                                            class="w-full contents  text-sm font-semibold text-gray-500">تعداد
+                                                            class="w-full contents  text-sm font-semibold text-gray-500 dark:text-white">تعداد
                                                         مسافرین
                                                     </label>
                                                 </div>
@@ -234,22 +233,22 @@
                                                 <div class="flex flex-row h-10  rounded-lg relative bg-transparent mt-1 mx-2">
                                                     <button data-action="decrement"
                                                             class="  text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer outline-none">
-                                                        <span class="m-auto text-2xl font-thin">−</span>
+                                                        <span class="m-auto text-2xl font-thin dark:text-white">−</span>
                                                     </button>
                                                     <input type="number" min="1"
-                                                           class="outline-none focus:outline-none text-center w-10  font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                                           class="outline-none focus:outline-none text-center w-10 dark:text-white dark:bg-gray-900  font-semibold text-md  focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
                                                            name="custom-input-number" value="1"></input>
 
                                                     <button data-action="increment"
                                                             class=" text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer">
-                                                        <span class="m-auto text-2xl font-thin">+</span>
+                                                        <span class="m-auto text-2xl font-thin dark:text-white">+</span>
                                                     </button>
                                                 </div>
 
                                             </div>
-                                            <div class="flex items-center mx-2 ">
+                                            <div class="flex items-center mx-2 gap-1 ">
                                                 <label for="TicketVal"
-                                                       class="w-full contents text-gray-500 text-sm font-semibold w-20">
+                                                       class="w-full contents text-gray-500 text-sm font-semibold w-20 dark:text-white">
                                                     کلاس پروازی
                                                 </label>
                                                 <select id="TicketVal" name="country" autocomplete="country-name"
@@ -263,7 +262,7 @@
                                         </div>
                                     </div>
                                     <div class="flex justify-center">
-                                        <button class="p-2 border w-full md:w-1/4 rounded-md bg-gray-800 text-white">
+                                        <button class="p-2 border w-full md:w-1/4 rounded-md bg-gray-800 text-white dark:bg-green-600">
                                             پیدا کردن
                                             بلیط مورد نظر
                                         </button>
@@ -286,20 +285,20 @@
                          src="assets/img/main-banner/Asset-4.png">
                     <img class=" -z-10 absolute w-50 md:w-86 h-auto -bottom-20 left-48 left blur-sm "
                          src="assets/img/main-banner/Asset-5.png">
-                    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-                        <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-                             viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
-                                  d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>
-                            <defs>
-                                <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208"
-                                                y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#9089FC"></stop>
-                                    <stop offset="1" stop-color="#FF80B5"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
+<!--                    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">-->
+<!--                        <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"-->
+<!--                             viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"-->
+<!--                                  d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>-->
+<!--                            <defs>-->
+<!--                                <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208"-->
+<!--                                                y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">-->
+<!--                                    <stop stop-color="#9089FC"></stop>-->
+<!--                                    <stop offset="1" stop-color="#FF80B5"></stop>-->
+<!--                                </linearGradient>-->
+<!--                            </defs>-->
+<!--                        </svg>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -308,7 +307,7 @@
 
 
 <!-- component -->
-<div class=" flex items-center justify-center bg-white my-20 ">
+<div class=" flex items-center justify-center bg-white py-20 dark:bg-gray-900 ">
 
     <div class="grid grid-cols-12 px-18 gap-5 z-10">
 
