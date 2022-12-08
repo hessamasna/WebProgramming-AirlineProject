@@ -57,25 +57,25 @@ availableTickets.map(ticket => {
                             </div>
                             
                             <div class="w-full self-center pt-4 lg:w-1/6 lg:pt-0 md:text-center">${ticket.flightType}</div>
-
-                            <div class="w-full self-center pt-4 lg:w-1/6 lg:pt-0 md:text-center">
-                                <div class="ml-1">
-                                    <div>${ticket.origin}</div>
-                                    <div class="text-xl font-bold leading-5 tracking-tight">Dec 20, 2022</div>
-                                    <div class="text-sm text-slate-500 ">${ticket.takeOff} GMT+3:30</div>
+                            <div class="flex justify-between">
+                                <div class=" self-center pt-4 w-auto lg:pt-0 md:text-center">
+                                    <div class="ml-1">
+                                        <div>${ticket.origin}</div>
+                                        <div class="text-xl font-bold leading-5 tracking-tight">Dec 20, 2022</div>
+                                        <div class="text-sm text-slate-500 ">${ticket.takeOff} GMT+3:30</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="self-center text-4xl"> &larr; </div>
+                                
+                                <div class=" self-center pt-4 w-auto lg:pt-0 md:text-center">
+                                    <div class="ml-1">
+                                        <div>${ticket.destination}</div>
+                                        <div class="text-xl font-bold leading-5 tracking-tight">Dec 21, 2022</div>
+                                        <div class="text-sm text-slate-500 ">${ticket.arrival} GMT+3:30</div>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <div class="self-center text-4xl"> &larr; </div>
-                            
-                            <div class="w-full self-center pt-4 lg:w-1/6 lg:pt-0 md:text-center">
-                                <div class="ml-1">
-                                    <div>${ticket.destination}</div>
-                                    <div class="text-xl font-bold leading-5 tracking-tight">Dec 20, 2022</div>
-                                    <div class="text-sm text-slate-500 ">${ticket.arrival} GMT+3:30</div>
-                                </div>
-                            </div>
-
                             <div class="w-full self-center pt-4 lg:w-1/6 lg:pt-0 md:text-center">
                                 <div class="ml-1">
                                     <div class="text-xl font-extrabold leading-5 tracking-tight">

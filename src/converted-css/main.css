@@ -1617,6 +1617,15 @@ select {
   width: 1rem;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-auto {
+  width: auto;
+}
+
 .max-w-none {
   max-width: none;
 }
