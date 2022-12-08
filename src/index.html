@@ -13,7 +13,11 @@
     <script src="js/main.js" defer></script>
     <!--    <script src="../path/to/flowbite/dist/flowbite.js"></script>-->
     <script src="https://unpkg.com/flowbite@1.5.4/dist/datepicker.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <link
+            href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"
+            rel="stylesheet"
+    />
 
     <title>Cip Airline</title>
 </head>
@@ -154,10 +158,10 @@
                                                    class="w-full contents text-gray-700 text-sm font-semibold w-20 dark:text-white">
                                                 نوع بلیط
                                             </label>
-                                            <select id="Ticket" name="country"
+                                            <select id="flightMode" name="country"
                                                     class="px-7 mt-1 block  rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                                                <option>یک طرفه</option>
-                                                <option>دو طرفه</option>
+                                                <option value="one">یک طرفه</option>
+                                                <option value="two">دو طرفه</option>
                                             </select>
                                         </div>
                                         <div class=" border border-gray-200 p-2 rounded col-span-6 sm:col-span-8 flex-1">
@@ -167,18 +171,32 @@
                                                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                                         <i class="fa-solid fa-plane-departure"></i>
                                                     </div>
-                                                    <input type="text"
+                                                    <input type="text" list="airport-org-options" id="origin"
                                                            class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900"
                                                            placeholder="نام یا کد فرودگاه">
+                                                    <datalist id="airport-org-options">
+                                                        <option value="United Arab Emirates">AUH</option>
+                                                        <option value="Nigeria">ABV</option>
+                                                        <option value="Malaysia">AOR</option>
+                                                        <option value="Imam Khomeini International">IKA</option>
+                                                        <option value="Switzerland">ACH</option>
+                                                    </datalist>
                                                 </div>
                                                 <span class="mx-2 mr-4 text-gray-500 dark:text-white">فرودگاه مقصد</span>
-                                                <div class="relative">
+                                                <div class="relative ">
                                                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                                         <i class="fa-solid fa-plane-arrival"></i>
                                                     </div>
-                                                    <input type="text"
+                                                    <input type="text" list="airport-dis-options" id="destination"
                                                            class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900"
                                                            placeholder="نام یا کد فرودگاه">
+                                                    <datalist id="airport-dis-options" >
+                                                        <option value="United Arab Emirates">AUH</option>
+                                                        <option value="Nigeria">ABV</option>
+                                                        <option value="Malaysia">AOR</option>
+                                                        <option value="Imam Khomeini International">IKA</option>
+                                                        <option value="Switzerland">ACH</option>
+                                                    </datalist>
                                                 </div>
                                             </div>
                                         </div>
@@ -199,7 +217,7 @@
                                                                   clip-rule="evenodd"></path>
                                                         </svg>
                                                     </div>
-                                                    <input name="start" type="text"
+                                                    <input name="start" type="text" id="startDate"
                                                            class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900"
                                                            placeholder="تاریخ شروع سفر">
                                                 </div>
@@ -215,7 +233,7 @@
                                                                   clip-rule="evenodd"></path>
                                                         </svg>
                                                     </div>
-                                                    <input name="end" type="text"
+                                                    <input name="end" type="text" id="finishDate"
                                                            class="text-gray-900 text-sm rounded-lg  block w-full pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900"
                                                            placeholder="تاریخ پایان سفر">
                                                 </div>
@@ -235,7 +253,7 @@
                                                             class="  text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer outline-none">
                                                         <span class="m-auto text-2xl font-thin dark:text-white">−</span>
                                                     </button>
-                                                    <input type="number" min="1"
+                                                    <input type="number" min="1" id="PassengerNumber"
                                                            class="outline-none focus:outline-none text-center w-10 dark:text-white dark:bg-gray-900  font-semibold text-md  focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
                                                            name="custom-input-number" value="1"></input>
 
@@ -247,22 +265,22 @@
 
                                             </div>
                                             <div class="flex items-center mx-2 gap-1 ">
-                                                <label for="TicketVal"
+                                                <label for="TicketVal" id="flightType"
                                                        class="w-full contents text-gray-500 text-sm font-semibold w-20 dark:text-white">
                                                     کلاس پروازی
                                                 </label>
                                                 <select id="TicketVal" name="country" autocomplete="country-name"
                                                         class="px-7 mt-1 block  rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                                                    <option>مهم نیست</option>
-                                                    <option>اکونومی</option>
-                                                    <option>بزینس</option>
-                                                    <option>فرست</option>
+                                                    <option value="all">مهم نیست</option>
+                                                    <option value="economy">اکونومی</option>
+                                                    <option value="business">بزینس</option>
+                                                    <option value="first">فرست</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="flex justify-center">
-                                        <button class="p-2 border w-full md:w-1/4 rounded-md bg-gray-800 text-white dark:bg-green-600">
+                                        <button id="ticket-search" class="p-2 border w-full md:w-1/4 rounded-md bg-gray-800 text-white dark:bg-green-600">
                                             پیدا کردن
                                             بلیط مورد نظر
                                         </button>
