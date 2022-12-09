@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="3be87d573f" level="application" />
     <orderEntry type="library" name="flowbite" level="application" />
+    <orderEntry type="library" name="flowbite" level="application" />
   </component>
 </module>
