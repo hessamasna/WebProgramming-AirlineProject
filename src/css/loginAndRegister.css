@@ -18,7 +18,7 @@ body {
     background-size: cover;
 }
 
-.container {
+.form__container {
     width: 400px;
     max-width: 400px;
     margin: 1rem;
