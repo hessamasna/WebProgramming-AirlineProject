@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded",() => {
         e.preventDefault();
         
         setFormMessage(loginForm , "success" , "شما با موفقیت وارد شدید");
+        localStorage.setItem('isLogin' , 'true');
+        window.location.href ='/profile.html'
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
