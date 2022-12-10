@@ -3165,6 +3165,10 @@ input[type='number']::-webkit-outer-spin-button {
     width: 18rem;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:max-w-5xl {
     max-width: 64rem;
   }

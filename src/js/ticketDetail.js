@@ -18,18 +18,18 @@ const addPassenger = (passenger) => {
 
 for (let i = 0; i <numberOfPassengers ; i++) {
     forms.innerHTML += `
-        <form class="flex flex-row z-10 mb-3 justify-center mx-10 border border-gray-300 dark:bg-gray-900 p-6 gap-6 bg-white shadow-lg rounded-lg ring-1 ring-gray-500">
+        <form class="flex flex-col md:flex-row z-10 mb-3 justify-center mx-10 border border-gray-300 dark:bg-gray-900 p-6 gap-6 bg-white shadow-lg rounded-lg ring-1 ring-gray-500">
             <input type="text"
-            class="text-gray-900 text-sm rounded-lg m-auto  block w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
+            class="text-gray-900 w-full text-sm rounded-lg m-auto  block md:w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
             placeholder="نام"
             value=${user && i === 0 ? user.fullName : ''}
             >
             <input type="text"
-            class="text-gray-900 text-sm rounded-lg m-auto  block w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
+            class="text-gray-900 w-full text-sm rounded-lg m-auto  block md:w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
             placeholder="نام خانوادگی"
             value=${user && i === 0 ? user.email : '' }>
             <input type="number"
-            class="text-gray-900 text-sm rounded-lg m-auto  block w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
+            class="text-gray-900 w-full text-sm rounded-lg m-auto  block md:w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
             placeholder="شماره پاسپورت"
             value=${user && i === 0 ? user.passportNumber : '' }
             >
@@ -46,7 +46,7 @@ function finishProcess() {
 }
 forms.innerHTML += `
     <div class="flex lg:justify-end">
-                                        <button class="p-2 border w-full md:w-1/4 rounded-md bg-gray-800 text-white dark:bg-green-600" onclick="finishProcess()">
+                                        <button class="p-2 mx-10 border w-full md:w-1/4 rounded-md bg-gray-800 text-white dark:bg-green-600" onclick="finishProcess()">
                                             ثبت و پرداخت
                                         </button>
                                     </div>
