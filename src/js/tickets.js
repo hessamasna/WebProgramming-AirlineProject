@@ -12,28 +12,17 @@ const urlParams = new URLSearchParams(queryString);
 const params = Object.fromEntries(urlParams)
 const ticketsList = document.getElementById('tickets-wrapper')
 const tickets = document.getElementById('tickets-list')
-const availableTickets = [
-    {
-        flightNumber: 2298,
-        origin: 'tehran',
-        destination: 'istanbul',
-        duration: 180,// TODO use to calculate arrival time
-        company: 'Qatar Airways',
-        takeOff: '20:00',
-        startDate: '22/11/2022',
-        arrival: '21:00',
-        finishDate: '22/11/2022',
-        pricePerPerson: 200000,
-        numberOfPerson: 4,
-        capacity: 100,
-        fullPrice: this.numberOfPerson * this.pricePerPerson,
-        isCapacityLimited: this.capacity < (this.numberOfPerson * 3),
-        flightType: 'Business',
-        flightMode: 'twoWay'
-    }
-]
-availableTickets.map(ticket => {
-    ticketsList.innerHTML += `
+
+const data = []
+const { PassengerNumber: passengerCount } = params || {};
+const availableTickets = data.filter((item)=>
+    item.destination === params.destination &&
+        item.origin === params.origin && (params.flightType ?? item.flightType === params.flightType) && item.startDate === params.startDate
+)
+
+if (availableTickets.length){
+    availableTickets.map(ticket => {
+        ticketsList.innerHTML += `
         <div class="mb-2">
                         <div
                                 class=" border border-gray-900 flex w-full transform flex-col justify-between rounded-md bg-gray-200  bg-opacity-75 p-6 text-slate-800 transition duration-500 ease-in-out  hover:shadow-lg dark:bg-slate-700 dark:bg-opacity-25 dark:text-slate-300 lg:flex-row lg:p-4">
@@ -79,15 +68,15 @@ availableTickets.map(ticket => {
                             <div class="w-full self-center pt-4 lg:w-1/6 lg:pt-0 md:text-center">
                                 <div class="ml-1">
                                     <div class="text-xl font-extrabold leading-5 tracking-tight">
-                                        <span class="align-middle">${ticket.numberOfPerson * ticket.pricePerPerson}</span>
+                                        <span class="align-middle">${passengerCount * ticket.pricePerPerson}</span>
                                         <span class="text-[8px]  rounded  py-1 align-middle font-bold uppercase ">ریال</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="w-full self-center px-1 pt-4 pb-2 lg:w-1/6 lg:px-0 lg:pt-0 lg:pb-0 md:text-center flex flex-col">
-                                <span class=${ticket.capacity > 3 * ticket.numberOfPerson ? 'font-bold' : 'text-red-800'}>${ticket.capacity} نفر</span>
-                                <span class=${ticket.capacity < 3 * ticket.numberOfPerson ? 'text-red-800' : 'hidden'} > 3>تعداد بلیط محدود است.</span>
+                                <span class=${ticket.capacity > 3 * passengerCount ? 'font-bold' : 'text-red-800'}>${ticket.capacity} نفر</span>
+                                <span class=${ticket.capacity < 3 * passengerCount ? 'text-red-800' : 'hidden'} > 3>تعداد بلیط محدود است.</span>
                             </div>
 
 
@@ -99,7 +88,11 @@ availableTickets.map(ticket => {
                         </div>
                     </div>
     `
-})
+    })
+}else ticketsList.innerHTML += `
+    <h1 class="text-center lg:text-xl">بیلطی یافت نشد<h1/>
+`
+
 
 //******************************************//
 
