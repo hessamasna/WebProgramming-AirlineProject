@@ -34,8 +34,8 @@ for (let i = 0; i < 300; i++) {
         duration: durations[Math.floor((Math.random() * durations.length))],
         takeOff: Math.floor(Math.random() * 24),
         arrival: Math.floor(Math.random() * 24),
-        startDate: startDate.toISOString().split('T')[0],
-        finishDate: end.toISOString().split('T')[0],
+        startDate: startDate.toISOString().split('T')[0].replace('-','/'),
+        finishDate: end.toISOString().split('T')[0].replace('-','/'),
         pricePerPerson: Math.floor(Math.random() * (1_000_000 - 600_000 + 1) + 600_000),
         capacity: Math.floor(Math.random() * (110 - 20 + 1)) + 20,
         flightType: flightClass[Math.floor((Math.random()*flightClass.length))]
