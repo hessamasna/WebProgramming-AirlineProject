@@ -10,8 +10,21 @@ const FLIGHT_TYPE = document.getElementById("flightType");
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const params = Object.fromEntries(urlParams)
+console.log(params);
+const flightDate = reverseDate(params.startDate)
+const returnDate = reverseDate(params.finishDate);
 const ticketsList = document.getElementById('tickets-wrapper')
 const tickets = document.getElementById('tickets-list')
+
+function reverseDate(date) {
+    let arr = date.split('/');
+    arr = arr.reverse()
+    let temp1 = arr[2]
+    let temp2 = arr[1]
+    arr[1] = temp1
+    arr[2] = temp2
+    return arr.join('/')
+}
 
 const data = [
     {
@@ -1518,7 +1531,7 @@ const data = [
 const { PassengerNumber: passengerCount } = params || {};
 const availableTickets = data.filter((item)=>
     item.destination === params.destination &&
-        item.origin === params.origin && (params.flightType ?? item.flightType === params.flightType) && item.startDate === params.startDate
+        item.origin === params.origin && (params.flightType ?? item.flightType === params.flightType) && item.startDate === flightDate && item.finishDate === returnDate
 )
 
 if (availableTickets.length){
@@ -1542,7 +1555,7 @@ if (availableTickets.length){
 
                                 <div class="mr-4 ">
                                     <div class="w-fullX ">${ticket.company}</div>
-                                    <div class="text-sm text-slate-500">شماره پرواز: ${ticket.flightNumber}</div>
+                                    <div class="text-sm text-slate-500">شماره پرواز: ${ticket.flightNUmber}</div>
                                 </div>
                             </div>
                             
@@ -1582,7 +1595,7 @@ if (availableTickets.length){
 
 
                             <div class="self-center">
-                                <div class="w-32 text-sm bg-green-600 text-white text-center py-1 rounded-lg hover:cursor-pointer" onclick=window.location.href = '/buyTicket.html?number=${passengerCount}' >
+                                <div class="w-32 text-sm bg-green-600 text-white text-center py-1 rounded-lg hover:cursor-pointer" onclick="window.location.href = '/buyTicket.html?number=${passengerCount}'" >
                                     خرید
                                 </div>
                             </div>
