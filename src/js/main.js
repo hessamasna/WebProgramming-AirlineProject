@@ -20,7 +20,7 @@ TICKET_SEARCH_BTN.addEventListener("click", function () {
     params += 'PassengerNumber=' + PASSENGER_NUMBER.value + '&';
     params += 'startDate=' + START_DATE.value + '&';
     params += 'finishDate=' + FINISH_DATE.value + '&';
-    params += 'flightType=' + FLIGHT_TYPE.value + '&';
+    params += 'flightType=' + FLIGHT_TYPE.value;
 
     console.log(params)
     window.location.href = '/tickets.html' + params;
