@@ -6,8 +6,7 @@ const START_DATE = document.getElementById("startDate");
 const FINISH_DATE = document.getElementById("finishDate");
 const PASSENGER_NUMBER = document.getElementById("PassengerNumber");
 const FLIGHT_TYPE = document.getElementById("flightType");
-const SIGNUP = document.getElementById("signup");
-const PROFILE = document.getElementById("profile");
+
 
 TICKET_SEARCH_BTN.addEventListener("click", function () {
     let params = '?'
@@ -27,17 +26,7 @@ TICKET_SEARCH_BTN.addEventListener("click", function () {
     window.location.href = '/tickets.html' + params;
 });
 
-function checkIsLogin() {
-    let isLogin = localStorage.getItem('isLogin')
-    if (isLogin === 'true') {
-        SIGNUP.classList.add("hidden");
-        PROFILE.classList.remove("hidden");
-    } else {
 
-        PROFILE.classList.add("hidden");
-        SIGNUP.classList.remove("hidden");
-    }
-}
 
 function decrement(e) {
     const btn = e.target.parentNode.parentElement.querySelector(
@@ -51,7 +40,6 @@ function decrement(e) {
     target.value = value;
 }
 
-checkIsLogin();
 
 function increment(e) {
     const btn = e.target.parentNode.parentElement.querySelector(
