@@ -1,7 +1,7 @@
 const TICKET_SEARCH_BTN = document.getElementById("ticket-search");
 const FLIGHT_MODE = document.getElementById("flightMode");
 const ORIGIN = document.getElementById("origin");
-const DESTINATION = document.getElementById(destination);
+const DESTINATION = document.getElementById('destination');
 const START_DATE = document.getElementById("startDate");
 const FINISH_DATE = document.getElementById("finishDate");
 const PASSENGER_NUMBER = document.getElementById("PassengerNumber");
@@ -1581,8 +1581,8 @@ if (availableTickets.length){
                             </div>
 
 
-                            <div class=" self-center">
-                                <div class="w-32 text-sm bg-green-600 text-white text-center py-1 rounded-lg hover:cursor-pointer">
+                            <div class="self-center">
+                                <div class="w-32 text-sm bg-green-600 text-white text-center py-1 rounded-lg hover:cursor-pointer" onclick=window.location.href = '/buyTicket.html?number=${passengerCount}' >
                                     خرید
                                 </div>
                             </div>

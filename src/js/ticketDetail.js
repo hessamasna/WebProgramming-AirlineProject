@@ -4,7 +4,12 @@ let passengers = []
 if (!localStorage.getItem('signupForm') ) window.location.href = '/loginAndRegister.html'
 const user = JSON.parse(localStorage.getItem('signupForm'))
 
-const numberOfPassengers = 3;
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const params = Object.fromEntries(urlParams)
+const { number } = params || {};
+
+const numberOfPassengers = +number;
 
 const addPassenger = (passenger) => {
   passengers.push(passenger);
