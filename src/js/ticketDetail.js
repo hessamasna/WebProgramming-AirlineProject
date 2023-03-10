@@ -28,7 +28,7 @@ for (let i = 0; i <numberOfPassengers ; i++) {
             class="text-gray-900 w-full text-sm rounded-lg m-auto  block md:w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
             placeholder="نام خانوادگی"
             value=${user && i === 0 ? user.email : '' }>
-            <input type="number"
+            <input type="text"
             class="text-gray-900 w-full text-sm rounded-lg m-auto  block md:w-1/2 pl-10 p-2.5 placeholder-gray-400  ring-1 ring-gray-900 " + ${user && i === 0 ? 'disabled' : ''}
             placeholder="شماره پاسپورت"
             value=${user && i === 0 ? user.passportNumber : '' }
